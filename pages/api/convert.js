@@ -114,6 +114,28 @@ module.exports = async (req, res) => {
     const proxies = surgeProxies.filter((p) => p !== undefined);
     res.status(200).send(proxies.join("\n"));
   } else {
+    config.proxies.forEach((e) => {e.name = e.name.
+        replace("专线", "IEPL").
+        replace("中继", "Relay").
+        replace("冷门", "Rare").
+
+        replace("香港", "HK").
+        replace("台湾", "TW").
+        replace("新加坡", "SG").
+        replace("韩国", "KR").
+        replace("日本", "JP").
+        replace("美国", "US").
+
+        replace("阿根廷", "Argentina").
+        replace("澳大利亚", "Australia").
+        replace("巴西", "Brazil").
+        replace("德国", "Germany").
+        replace("英国", "Great Britain").
+        replace("印度", "India").
+        replace("巴基斯坦", "Pakistan").
+        replace("俄罗斯", "Russia").
+        replace("土耳其", "Turkey")
+    });
     const response = YAML.stringify({ proxies: config.proxies });
     res.status(200).send(response);
   }
