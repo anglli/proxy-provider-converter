@@ -118,6 +118,7 @@ module.exports = async (req, res) => {
         replace("专线", "IEPL").
         replace("中继", "Relay").
         replace("冷门", "Rare").
+        replace("IPLC", " IPLC").
 
         replace("香港", "HK").
         replace("台湾", "TW").
@@ -132,6 +133,7 @@ module.exports = async (req, res) => {
         replace("德国", "Germany").
         replace("英国", "Great Britain").
         replace("印度", "India").
+        replace("意大利", "Italy").
         replace("巴基斯坦", "Pakistan").
         replace("俄罗斯", "Russia").
         replace("土耳其", "Turkey")
